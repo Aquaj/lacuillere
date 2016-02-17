@@ -26,6 +26,10 @@ Rails.application.routes.draw do
   #     end
   #   end
 
+  resources :restaurants do
+    resources :reviews, only: [:new, :create]
+  end
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
