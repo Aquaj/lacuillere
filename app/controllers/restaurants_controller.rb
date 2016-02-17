@@ -8,6 +8,10 @@ class RestaurantsController < ApplicationController
   def show
   end
 
+  def new
+    @restaurant = Restaurant.new
+  end
+
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
