@@ -25,10 +25,13 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  #
 
   resources :restaurants do
     resources :reviews, only: [:new, :create]
   end
+
+  root "restaurants#index"
 
   # Example resource route with sub-resources:
   #   resources :products do

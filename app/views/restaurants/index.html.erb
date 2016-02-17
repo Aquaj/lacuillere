@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <% @restaurants.each do |restaurant| %>
+      <%= link_to restaurant_path(restaurant) do %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="restaurant restaurant-<%= restaurant.category %>" style="background-image: url('<%= image_url("country_backgrounds/"+@country[restaurant.category.to_sym].downcase+'.jpg') %>');">
+            <h2><%= restaurant.name %><%= image_tag "64/"+@country[restaurant.category.to_sym], class: "countryflag" %></h2>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

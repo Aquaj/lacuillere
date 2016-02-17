@@ -1,0 +1,33 @@
+
+
+  h2 {
+    display: inline;
+  }
+
+  .title{
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .review {
+    padding: 15px 25px;
+    border: 1px solid #999999;
+    display: flex;
+    justify-content: space-between;
+
+    .reviewrating {
+      color: yellow;
+    }
+
+    .reviewcontent {
+      font-style: italic;
+    }
+  }

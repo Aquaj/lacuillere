@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+  before_action :set_country, only: [:index, :show]
 
   def index
     @restaurants = Restaurant.all
@@ -33,6 +34,10 @@ class RestaurantsController < ApplicationController
   end
 
 private
+
+  def set_country
+    @country = { chinese: "China", italian: "Italy", french: "France", japanese: "Japan", belgian: "Belgium"}
+  end
 
   def set_restaurant
     @restaurant = Restaurant.find(params[:id])

@@ -4,4 +4,7 @@ class Restaurant < ActiveRecord::Base
   validates :address, presence: true
   validates :category, presence: true
   validates :category, inclusion: { in: %W(chinese italian japanese french belgian) }
+
+  geocoded_by :address
+  after_validation :geocode
 end
